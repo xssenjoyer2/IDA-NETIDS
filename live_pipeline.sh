@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 # live_pipeline.sh — tcpdump → Zeek → features → ML → (ML pos/neg ayrımı) → Rules → Merge → Actions
+
+# ============================================================
+# Bu betik, IDA-NETIDS’in uçtan uca canlı pipeline’ıdır.
+# Ağ arayüzünden (default: enp44s0) tcpdump ile trafiği yakalar,
+# Zeek ile akış kayıtlarına dönüştürür, özellik çıkarımı yapar,
+# LightGBM modeli ile skorlar, kural motoru ile ikinci analizden
+# geçirir ve sonuçları birleştirerek (merge) saldırgan IP’leri
+# ipset/iptables üzerinden geçici olarak banlar. 
+# İsteğe bağlı olarak dash_alerts.py ile web panelinden takip edilebilir.
+# ============================================================
+
 set -euo pipefail
 
 # === AYARLAR ===
