@@ -1,0 +1,4 @@
+binary:
+  threshold: 0.80
+  precision_target: 0.98
+  fpr_target: 0.005

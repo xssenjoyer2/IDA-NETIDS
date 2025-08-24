@@ -1,0 +1,21 @@
+{
+  "short_window_seconds": 60,
+  "slow_window_seconds": 1800,
+
+  "per_src_attempt_threshold": 60,
+  "per_srcdst_attempt_threshold": 22,
+  "per_srcdstport_attempt_threshold": 14,
+  "per_dst_multi_src_threshold": 45,
+
+  "fail_ratio_threshold": 0.80,
+  "syn_noack_mean_threshold": 0.40,
+  "slow_attempt_threshold": 180,
+  "success_break_threshold": 1,
+
+  "require_focus_for_trigger": true,
+  "off_focus_multiplier": 4.0,
+
+  "ports_focus": [22,21,23,25,110,143,445,3389,5900,3306,5432,8080,8443],
+  "services_focus": ["ssh","ftp","telnet","smtp","imap","pop3","smb","rdp","vnc","http","ssl","https"],
+  "exclude_ports": [53,123,1900,5353]
+}

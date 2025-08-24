@@ -1,0 +1,31 @@
+{
+  "short_window_seconds": 20,
+  "long_window_seconds": 600,
+
+  "proto_scope": ["tcp","udp"],
+  "exclude_ports": [22,3389],
+
+  "tcp_focus_ports": [80,443,8080,8443,8000,8081],
+  "udp_focus_ports": [53,123,1900,161,389,11211,111,69,137,5353],
+  "require_victim_focus": true,
+
+  "victim_unique_src_threshold_short": 120,
+  "victim_rows_threshold_short": 2200,
+  "victim_pairs_threshold_short": 1100,
+
+  "victim_unique_src_threshold_long": 600,
+  "victim_rows_threshold_long": 6500,
+  "victim_pairs_threshold_long": 2600,
+
+  "s0_ratio_threshold": 0.40,
+  "syn_noack_mean_threshold": 0.35,
+
+  "udp_amplification_ports": [53,123,1900,161,389,11211,111,69,137,5353],
+  "udp_amplification_multiplier": 0.6,
+  "udp_amplification_multipliers": {
+    "11211": 0.4,
+    "1900": 0.5,
+    "53": 0.55,
+    "123": 0.55
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "short_window_seconds": 30,
+  "long_window_seconds": 900,
+
+  "require_focus": true,
+  "focus_ports": [53],
+
+  "victim_rows_threshold_short": 800,
+  "victim_unique_src_threshold_short": 70,
+
+  "victim_rows_threshold_long": 3500,
+  "victim_unique_src_threshold_long": 220,
+
+  "enable_udp_bytes_ratio": true,
+  "udp_bytes_ratio_threshold": 8.0,
+  "udp_min_rows_for_ratio": 120
+}

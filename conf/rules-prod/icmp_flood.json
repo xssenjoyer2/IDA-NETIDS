@@ -1,0 +1,23 @@
+{
+  "short_window_seconds": 30,
+  "long_window_seconds": 300,
+
+  "src_total_threshold_short": 220,
+  "src_total_threshold_long": 1200,
+
+  "pair_threshold_short": 150,
+  "pair_threshold_long": 700,
+
+  "victim_total_threshold_short": 450,
+  "victim_unique_src_threshold_short": 40,
+
+  "victim_total_threshold_long": 2000,
+  "victim_unique_src_threshold_long": 120,
+
+  "pps_threshold_short": 700,
+  "reply_ratio_max": 0.12,
+  "enforce_echo_like": true,
+
+  "src_ip_whitelist": [],
+  "dst_ip_whitelist": []
+}

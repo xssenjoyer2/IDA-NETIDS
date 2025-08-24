@@ -1,0 +1,21 @@
+{
+  "short_window_seconds": 20,
+  "long_window_seconds": 600,
+
+  "s0_ratio_threshold": 0.45,
+  "syn_noack_threshold": 0.45,
+
+  "unique_dst_threshold_short": 10,
+  "unique_dst_threshold_long": 50,
+
+  "unique_port_threshold_short": 12,
+  "unique_port_threshold_long": 70,
+
+  "pair_threshold_short": 15,
+  "pair_threshold_long": 90,
+
+  "burst_conn_threshold_short": 200,
+
+  "victim_unique_src_threshold_short": 18,
+  "victim_unique_src_threshold_long": 60
+}
