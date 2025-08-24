@@ -1,3 +1,24 @@
+# ============================================================
+# Bu script Zeek'ten gelen conn_raw.csv akışlarını alır,
+# ML modelinin beklediği özellik matrisini (X) üretir.
+# Adım adım işlevleri:
+#   - Kategorik alanları normalize eder (proto, service, conn_state, flow_dir).
+#   - Sayısal alanları güvene alır (NaN → 0) ve türetilmiş metrikler üretir
+#     (bytes_total, pkts_total, bps, pps, oranlar vb.).
+#   - Winsorize ile uç değerleri kırpar, outlier etkisini azaltır.
+#   - service_norm için en sık görülen K kategori tutulur, nadir servisler 
+#     "service_other_rare" altında gruplanır.
+#   - One-hot encoding ile kategorikler genişletilir, hafıza dostu tip atamaları yapılır.
+#   - İkili etiket (y_bin: normal vs attack) ve çoklu etiket (y_multi: attack_type) çıkarılır.
+#   - Çıktılar kaydedilir:
+#       X.parquet (özellik matrisi),
+#       y_bin.csv (binary etiket),
+#       y_multi.csv (multi-class etiket),
+#       X.columns.txt (şema).
+#
+# Sonuç: ML modeline hazır, temizlenmiş ve optimize edilmiş feature set.
+# ============================================================
+
 import argparse, re
 from pathlib import Path
 import pandas as pd
