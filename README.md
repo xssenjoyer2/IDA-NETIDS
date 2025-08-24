@@ -81,3 +81,13 @@ Model, ortalama **230.000 "normal"** ve **430.000 "attack"** etiketli veri ile e
 - kalan kısmı DNS flooding
 
 Bu dağılım LightGBM modellerinin dengeli ve farklı saldırı tiplerini kapsayacak şekilde öğrenmesini sağlamıştır.
+
+## Proje Durumu
+
+## Proje Durumu
+Bu proje şu anda **localhost ortamında geliştirme ve test aşamasındadır**.  
+DDoS ve DNS flood tespitleri kararlı şekilde çalışmaktadır; port-scan için kısa/uzun süreli bazı durumlarda iyileştirme gerekmektedir.  
+Henüz production ortamında uygulanmamış olup, kurulum ve testler Ubuntu + Zeek + tcpdump üzerinde yapılmıştır.
+
+
+
