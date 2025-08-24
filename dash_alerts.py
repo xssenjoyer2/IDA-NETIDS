@@ -1,4 +1,19 @@
 #!/usr/bin/env python3
+
+# ============================================================
+# Bu Streamlit tabanlı web arayüzü, IDA-NETIDS tarafından
+# üretilen birleşik alarmları (alerts_merged_stream.csv) 
+# ve actions.log’daki banlanan IP kayıtlarını canlı olarak
+# kullanıcıya gösterir. 
+# Kullanıcı arayüzden:
+#   - Auto-refresh süresini,
+#   - Minimum severity (low/med/high),
+#   - Kaynak filtresi (ML, Rules) 
+# seçerek veriyi filtreleyebilir. 
+# Normal trafik listelenmez; yalnızca alarm üreten 
+# ve banlanan saldırgan IP’ler görüntülenir.
+# ============================================================
+
 # -*- coding: utf-8 -*-
 import time
 from pathlib import Path
